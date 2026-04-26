@@ -507,7 +507,7 @@ h2 {
 /* ── ACTIVITIES ───────────────────────────────────────────── */
 .activities-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-top: 48px;
 }
@@ -790,6 +790,7 @@ h2 {
 @media (max-width: 1024px) {
   .bar-feature { grid-template-columns: 1fr; }
   .bar-feature-image { min-height: 320px; }
+  .activities-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
