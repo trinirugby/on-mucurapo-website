@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activities — On Mucurapo Bar & Grill</title>
+  <meta name="description" content="Pool tables, darts, foosball, karaoke, and live sports at On Mucurapo Bar & Grill, Port of Spain." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="On Mucurapo" class="nav-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" />
+      <span class="nav-logo-text" style="display:none;">ON MUCURAPO</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="activities.html" class="active">Activities</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Find Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE BANNER -->
+  <div class="page-banner">
+    <div class="page-banner-bg" style="background-image: url('assets/07_pool_lounge_wide_edited.jpg')"></div>
+    <div class="page-banner-content">
+      <span class="section-label">On Mucurapo</span>
+      <h1>Activities</h1>
+    </div>
+  </div>
+
+  <!-- ACTIVITIES GRID -->
+  <section class="section">
+    <div class="container">
+      <span class="section-label">What We Offer</span>
+      <h2>More than just a <span class="accent">bar</span></h2>
+      <div class="activities-grid">
+        <div class="activity-card" style="--img: url('assets/08_pool_table_bar_edited.jpg')">
+          <div class="activity-overlay"></div>
+          <div class="activity-content">
+            <div class="activity-icon">🎱</div>
+            <h3>Pool Tables</h3>
+            <p>Multiple tables across two dedicated rooms. Rack 'em up and play all night — we're open 24 hours.</p>
+          </div>
+        </div>
+        <div class="activity-card" style="--img: url('assets/04_darts_area_edited.jpg')">
+          <div class="activity-overlay"></div>
+          <div class="activity-content">
+            <div class="activity-icon">🎯</div>
+            <h3>Darts</h3>
+            <p>Electronic dartboard with scoring display. Grab a drink, step up to the oche, and show us what you've got.</p>
+          </div>
+        </div>
+        <div class="activity-card" style="--img: url('assets/06_foosball_area_edited.jpg')">
+          <div class="activity-overlay"></div>
+          <div class="activity-content">
+            <div class="activity-icon">⚽</div>
+            <h3>Foosball</h3>
+            <p>Fast-paced table football with live sports on the big screen behind you. The full sports bar experience.</p>
+          </div>
+        </div>
+        <div class="activity-card" style="--img: url('assets/03_lounge_group_alt_edited.jpg')">
+          <div class="activity-overlay"></div>
+          <div class="activity-content">
+            <div class="activity-icon">🎤</div>
+            <h3>Karaoke &amp; Sports</h3>
+            <p>Grab the mic, cheer on your team, or just vibe to the music. The crowd is always live at On Mucurapo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BAR FEATURE -->
+  <section class="bar-feature">
+    <div class="bar-feature-image" style="background-image: url('assets/01_bar_display_edited.jpg')"></div>
+    <div class="bar-feature-content">
+      <span class="section-label">The Bar</span>
+      <h2>Stocked to the <span class="accent">ceiling</span></h2>
+      <p>From local rums to premium spirits, our wall-to-wall bar is stocked with everything you need for a proper lime. Ice cold beers, cocktails, and more — all night long.</p>
+      <a href="contact.html" class="btn btn-outline">Get Directions</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">ON MUCURAPO</span>
+      <p class="footer-copy">© 2025 On Mucurapo Bar &amp; Grill · Mucurapo Rd, Port of Spain, Trinidad</p>
+      <p class="footer-phone"><a href="tel:+18682385281">(868) 238-5281</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

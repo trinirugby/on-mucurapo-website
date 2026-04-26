@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — On Mucurapo Bar & Grill</title>
+  <meta name="description" content="Photos from inside On Mucurapo Bar & Grill, Port of Spain, Trinidad." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="On Mucurapo" class="nav-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" />
+      <span class="nav-logo-text" style="display:none;">ON MUCURAPO</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="contact.html">Find Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE BANNER -->
+  <div class="page-banner">
+    <div class="page-banner-bg" style="background-image: url('assets/01_bar_display_edited.jpg')"></div>
+    <div class="page-banner-content">
+      <span class="section-label">On Mucurapo</span>
+      <h1>Gallery</h1>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <section class="section">
+    <div class="container">
+      <span class="section-label">Photos</span>
+      <h2>Inside <span class="accent">On Mucurapo</span></h2>
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-item--wide" data-src="assets/07_pool_lounge_wide_edited.jpg">
+          <img src="assets/07_pool_lounge_wide_edited.jpg" alt="Pool lounge wide view" loading="lazy" />
+          <div class="gallery-hover"><span>View</span></div>
+        </div>
+        <div class="gallery-item" data-src="assets/05_exterior_sign_edited.jpg">
+          <img src="assets/05_exterior_sign_edited.jpg" alt="On Mucurapo exterior sign" loading="lazy" />
+          <div class="gallery-hover"><span>View</span></div>
+        </div>
+        <div class="gallery-item" data-src="assets/09_back_pool_room_edited.jpg">
+          <img src="assets/09_back_pool_room_edited.jpg" alt="Back pool room" loading="lazy" />
+          <div class="gallery-hover"><span>View</span></div>
+        </div>
+        <div class="gallery-item" data-src="assets/04_darts_area_edited.jpg">
+          <img src="assets/04_darts_area_edited.jpg" alt="Darts area" loading="lazy" />
+          <div class="gallery-hover"><span>View</span></div>
+        </div>
+        <div class="gallery-item" data-src="assets/06_foosball_area_edited.jpg">
+          <img src="assets/06_foosball_area_edited.jpg" alt="Foosball area" loading="lazy" />
+          <div class="gallery-hover"><span>View</span></div>
+        </div>
+        <div class="gallery-item gallery-item--tall" data-src="assets/01_bar_display_edited.jpg">
+          <img src="assets/01_bar_display_edited.jpg" alt="Bar display" loading="lazy" />
+          <div class="gallery-hover"><span>View</span></div>
+        </div>
+        <div class="gallery-item" data-src="assets/02_lounge_group_edited.jpg">
+          <img src="assets/02_lounge_group_edited.jpg" alt="Lounge group" loading="lazy" />
+          <div class="gallery-hover"><span>View</span></div>
+        </div>
+        <div class="gallery-item" data-src="assets/03_lounge_group_alt_edited.jpg">
+          <img src="assets/03_lounge_group_alt_edited.jpg" alt="Lounge group alt" loading="lazy" />
+          <div class="gallery-hover"><span>View</span></div>
+        </div>
+        <div class="gallery-item" data-src="assets/08_pool_table_bar_edited.jpg">
+          <img src="assets/08_pool_table_bar_edited.jpg" alt="Pool table and bar" loading="lazy" />
+          <div class="gallery-hover"><span>View</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8592;</button>
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next">&#8594;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">ON MUCURAPO</span>
+      <p class="footer-copy">© 2025 On Mucurapo Bar &amp; Grill · Mucurapo Rd, Port of Spain, Trinidad</p>
+      <p class="footer-phone"><a href="tel:+18682385281">(868) 238-5281</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

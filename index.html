@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>On Mucurapo — Bar & Grill · Port of Spain</title>
-  <meta name="description" content="On Mucurapo Bar & Grill on Mucurapo Rd, Port of Spain. Open 24 hours. Pool, darts, foosball, karaoke, sports, and great food." />
+  <meta name="description" content="On Mucurapo Bar & Grill on Mucurapo Rd, Port of Spain. Open 24 hours. Pool, darts, foosball, karaoke, and sports." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
@@ -13,22 +13,24 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
-    <a href="#" class="nav-logo">ON MUCURAPO</a>
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="On Mucurapo" class="nav-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" />
+      <span class="nav-logo-text" style="display:none;">ON MUCURAPO</span>
+    </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#activities">Activities</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-      <li><a href="#contact" class="nav-cta">Find Us</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Find Us</a></li>
     </ul>
   </nav>
 
   <!-- HERO -->
-  <section class="hero" id="home">
+  <section class="hero">
     <video class="hero-video" autoplay muted loop playsinline poster="assets/07_pool_lounge_wide_edited.jpg">
       <source src="assets/On mucurapo video.mp4" type="video/mp4" />
     </video>
@@ -37,35 +39,37 @@
       <p class="hero-tag">Bar &amp; Grill · Port of Spain, Trinidad</p>
       <h1 class="hero-title">On Mucurapo</h1>
       <p class="hero-sub">Open 24 Hours &nbsp;·&nbsp; Pool &nbsp;·&nbsp; Darts &nbsp;·&nbsp; Karaoke &nbsp;·&nbsp; Sports</p>
-      <a href="#contact" class="btn btn-primary">Find Us</a>
-    </div>
-    <div class="hero-scroll-hint">
-      <span></span>
+      <a href="contact.html" class="btn btn-primary">Find Us</a>
     </div>
   </section>
 
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stat">
+        <span class="stat-num">24<small>hrs</small></span>
+        <span class="stat-label">Always Open</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">110+</span>
+        <span class="stat-label">Google Reviews</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">3.9<small>★</small></span>
+        <span class="stat-label">Rating</span>
+      </div>
+    </div>
+  </div>
+
   <!-- ABOUT -->
-  <section class="about section" id="about">
+  <section class="section" id="about">
     <div class="container about-grid">
       <div class="about-text">
         <span class="section-label">About</span>
         <h2>Your favourite <span class="accent">lime spot</span> in the capital</h2>
-        <p>On Mucurapo is where Port of Spain comes to unwind. Whether you're pulling up with the crew for a cold Carib, catching a big match, or staying for an all-night pool tournament — we've got you covered. Open 24 hours, every day.</p>
+        <p>On Mucurapo is where Port of Spain comes to unwind. Whether you're pulling up with the crew for a cold Carib, catching a big match, or staying for an all-night pool tournament — we've got you covered.</p>
         <p>Kick back in our open outdoor patio or cool down in the fully air-conditioned lounge. Great music, beastly cold beers, and vibes that keep people coming back for hours.</p>
-        <div class="about-stats">
-          <div class="stat">
-            <span class="stat-num">24<small>hrs</small></span>
-            <span class="stat-label">Always Open</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">110+</span>
-            <span class="stat-label">Google Reviews</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">3.9<small>★</small></span>
-            <span class="stat-label">Rating</span>
-          </div>
-        </div>
+        <a href="activities.html" class="btn btn-outline" style="margin-top:16px;">See What We Offer</a>
       </div>
       <div class="about-image">
         <img src="assets/02_lounge_group_edited.jpg" alt="Guests enjoying On Mucurapo lounge" loading="lazy" />
@@ -74,190 +78,39 @@
     </div>
   </section>
 
-  <!-- ACTIVITIES -->
-  <section class="activities section" id="activities">
+  <!-- PAGE LINK CARDS -->
+  <section class="page-links">
     <div class="container">
-      <span class="section-label">What We Offer</span>
-      <h2>More than just a <span class="accent">bar</span></h2>
-      <div class="activities-grid">
-        <div class="activity-card" style="--img: url('assets/08_pool_table_bar_edited.jpg')">
-          <div class="activity-overlay"></div>
-          <div class="activity-content">
-            <div class="activity-icon">🎱</div>
-            <h3>Pool Tables</h3>
-            <p>Multiple tables across two dedicated rooms. Rack 'em up and play all night.</p>
+      <span class="section-label">Explore</span>
+      <h2>Everything <span class="accent">On Mucurapo</span></h2>
+      <div class="page-links-grid">
+        <a href="activities.html" class="page-link-card">
+          <div class="page-link-card-bg" style="background-image: url('assets/08_pool_table_bar_edited.jpg')"></div>
+          <div class="page-link-card-overlay"></div>
+          <div class="page-link-card-content">
+            <h3>Activities</h3>
+            <p>Pool, darts, foosball, karaoke & sports</p>
+            <span class="page-link-arrow">Explore →</span>
           </div>
-        </div>
-        <div class="activity-card" style="--img: url('assets/04_darts_area_edited.jpg')">
-          <div class="activity-overlay"></div>
-          <div class="activity-content">
-            <div class="activity-icon">🎯</div>
-            <h3>Darts</h3>
-            <p>Electronic dartboard with scoring. Grab a drink and step up to the oche.</p>
+        </a>
+        <a href="gallery.html" class="page-link-card">
+          <div class="page-link-card-bg" style="background-image: url('assets/07_pool_lounge_wide_edited.jpg')"></div>
+          <div class="page-link-card-overlay"></div>
+          <div class="page-link-card-content">
+            <h3>Gallery</h3>
+            <p>Photos from inside On Mucurapo</p>
+            <span class="page-link-arrow">View Photos →</span>
           </div>
-        </div>
-        <div class="activity-card" style="--img: url('assets/06_foosball_area_edited.jpg')">
-          <div class="activity-overlay"></div>
-          <div class="activity-content">
-            <div class="activity-icon">⚽</div>
-            <h3>Foosball</h3>
-            <p>Fast-paced table football backed by live sports on the big screen.</p>
+        </a>
+        <a href="contact.html" class="page-link-card">
+          <div class="page-link-card-bg" style="background-image: url('assets/05_exterior_sign_edited.jpg')"></div>
+          <div class="page-link-card-overlay"></div>
+          <div class="page-link-card-content">
+            <h3>Find Us</h3>
+            <p>Mucurapo Rd, Port of Spain · (868) 238-5281</p>
+            <span class="page-link-arrow">Get Directions →</span>
           </div>
-        </div>
-        <div class="activity-card" style="--img: url('assets/03_lounge_group_alt_edited.jpg')">
-          <div class="activity-overlay"></div>
-          <div class="activity-content">
-            <div class="activity-icon">🎤</div>
-            <h3>Karaoke &amp; Sports</h3>
-            <p>Grab the mic or cheer on your team. The crowd is always live at On Mucurapo.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BAR FEATURE -->
-  <section class="bar-feature">
-    <div class="bar-feature-image" style="background-image: url('assets/01_bar_display_edited.jpg')"></div>
-    <div class="bar-feature-content">
-      <span class="section-label">The Bar</span>
-      <h2>Stocked to the <span class="accent">ceiling</span></h2>
-      <p>From local rums to premium spirits, our wall-to-wall bar is stocked with everything you need for a proper lime. Ice cold beers, cocktails, and more — all night long.</p>
-      <a href="#contact" class="btn btn-outline">Get Directions</a>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section class="gallery section" id="gallery">
-    <div class="container">
-      <span class="section-label">Gallery</span>
-      <h2>Inside <span class="accent">On Mucurapo</span></h2>
-      <div class="gallery-grid">
-        <div class="gallery-item gallery-item--wide" data-src="assets/07_pool_lounge_wide_edited.jpg">
-          <img src="assets/07_pool_lounge_wide_edited.jpg" alt="Pool lounge wide view" loading="lazy" />
-          <div class="gallery-hover"><span>View</span></div>
-        </div>
-        <div class="gallery-item" data-src="assets/05_exterior_sign_edited.jpg">
-          <img src="assets/05_exterior_sign_edited.jpg" alt="On Mucurapo exterior sign" loading="lazy" />
-          <div class="gallery-hover"><span>View</span></div>
-        </div>
-        <div class="gallery-item" data-src="assets/09_back_pool_room_edited.jpg">
-          <img src="assets/09_back_pool_room_edited.jpg" alt="Back pool room" loading="lazy" />
-          <div class="gallery-hover"><span>View</span></div>
-        </div>
-        <div class="gallery-item" data-src="assets/04_darts_area_edited.jpg">
-          <img src="assets/04_darts_area_edited.jpg" alt="Darts area" loading="lazy" />
-          <div class="gallery-hover"><span>View</span></div>
-        </div>
-        <div class="gallery-item" data-src="assets/06_foosball_area_edited.jpg">
-          <img src="assets/06_foosball_area_edited.jpg" alt="Foosball area" loading="lazy" />
-          <div class="gallery-hover"><span>View</span></div>
-        </div>
-        <div class="gallery-item gallery-item--tall" data-src="assets/01_bar_display_edited.jpg">
-          <img src="assets/01_bar_display_edited.jpg" alt="Bar display" loading="lazy" />
-          <div class="gallery-hover"><span>View</span></div>
-        </div>
-        <div class="gallery-item" data-src="assets/02_lounge_group_edited.jpg">
-          <img src="assets/02_lounge_group_edited.jpg" alt="Lounge group" loading="lazy" />
-          <div class="gallery-hover"><span>View</span></div>
-        </div>
-        <div class="gallery-item" data-src="assets/03_lounge_group_alt_edited.jpg">
-          <img src="assets/03_lounge_group_alt_edited.jpg" alt="Lounge group alt" loading="lazy" />
-          <div class="gallery-hover"><span>View</span></div>
-        </div>
-        <div class="gallery-item" data-src="assets/08_pool_table_bar_edited.jpg">
-          <img src="assets/08_pool_table_bar_edited.jpg" alt="Pool table and bar" loading="lazy" />
-          <div class="gallery-hover"><span>View</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
-    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8592;</button>
-    <button class="lightbox-next" id="lightboxNext" aria-label="Next">&#8594;</button>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="" />
-  </div>
-
-  <!-- REVIEWS -->
-  <section class="reviews section" id="reviews">
-    <div class="container">
-      <span class="section-label">Reviews</span>
-      <h2>What people <span class="accent">say</span></h2>
-      <div class="reviews-badge">
-        <span class="reviews-stars">★★★★</span>
-        <span class="reviews-score">3.9</span>
-        <span class="reviews-count">· 110 reviews on Google</span>
-      </div>
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"What a cool bar!! Great music, great place to play darts and pool and lovely food. What more do you want!! And a great place to watch sports."</p>
-          <div class="review-author">
-            <span class="review-name">Enda Morris</span>
-            <span class="review-meta">Local Guide · 52 reviews</span>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"On Mucurapo is a nice place to hang out with friends and even have a family lime. The bar provides beastly cold beers that would really impress anyone."</p>
-          <div class="review-author">
-            <span class="review-name">Devon La Touche</span>
-            <span class="review-meta">Local Guide · 12 reviews</span>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"We originally planned to stay for 1 hour — we ended up spending 7 hours. All lime sour but we made ours sweet. Thanks On Mucurapo!"</p>
-          <div class="review-author">
-            <span class="review-name">Livin Trini</span>
-            <span class="review-meta">Local Guide · 232 reviews</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FIND US -->
-  <section class="contact section" id="contact">
-    <div class="container contact-grid">
-      <div class="contact-info">
-        <span class="section-label">Find Us</span>
-        <h2>Come link with <span class="accent">us</span></h2>
-        <ul class="contact-list">
-          <li>
-            <span class="contact-icon">📍</span>
-            <div>
-              <strong>Address</strong>
-              <span>Mucurapo Rd, Port of Spain, Trinidad</span>
-            </div>
-          </li>
-          <li>
-            <span class="contact-icon">🕐</span>
-            <div>
-              <strong>Hours</strong>
-              <span>Open 24 Hours, 7 Days a Week</span>
-            </div>
-          </li>
-          <li>
-            <span class="contact-icon">📞</span>
-            <div>
-              <strong>Phone</strong>
-              <a href="tel:+18682385281">(868) 238-5281</a>
-            </div>
-          </li>
-        </ul>
-        <a href="tel:+18682385281" class="btn btn-primary">Call Us Now</a>
-      </div>
-      <div class="contact-map">
-        <iframe
-          title="On Mucurapo location map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.0!2d-61.5200!3d10.6500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c360a4f0a0a0a01%3A0x0!2sMucurapo+Rd%2C+Port+of+Spain%2C+Trinidad!5e0!3m2!1sen!2stt!4v1"
-          width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        </a>
       </div>
     </div>
   </section>
