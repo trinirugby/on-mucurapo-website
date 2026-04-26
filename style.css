@@ -233,25 +233,28 @@ h2 {
   border-bottom: 2px solid var(--brass);
 }
 
-/* Exterior feature: panoramic crop focused on the storefront sign */
+/* Exterior feature: small panoramic crop showing top of the sign */
 .exterior-feature {
   width: 100%;
   background: var(--dark);
   border-bottom: 1px solid var(--border);
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 .exterior-feature img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 21 / 9;
+  max-width: 720px;
+  height: 180px;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center top;
   display: block;
 }
 
 @media (max-width: 768px) {
   .exterior-feature img {
-    aspect-ratio: 16 / 9;
+    height: 140px;
+    max-width: 100%;
   }
 }
 
