@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#6B7A4D" />
   <title>Activities — On Mucurapo Bar & Grill</title>
   <meta name="description" content="Pool tables, darts, foosball, karaoke, and live sports at On Mucurapo Bar & Grill, Port of Spain." />
+  <link rel="icon" type="image/png" href="assets/on%20mucurapo%20logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
@@ -15,8 +17,7 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <a href="index.html" class="nav-logo">
-      <img src="assets/logo.png" alt="On Mucurapo" class="nav-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" />
-      <span class="nav-logo-text" style="display:none;">ON MUCURAPO</span>
+      <img src="assets/on%20mucurapo%20logo.png" alt="On Mucurapo" class="nav-logo-img" />
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -24,7 +25,6 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="activities.html" class="active">Activities</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
       <li><a href="contact.html">Find Us</a></li>
     </ul>
   </nav>
@@ -43,33 +43,50 @@
     <div class="container">
       <span class="section-label">What We Offer</span>
       <h2>More than just a <span class="accent">bar</span></h2>
-      <div class="activities-grid">
-        <div class="activity-card" style="--img: url('assets/08_pool_table_bar_edited.jpg')">
+      <p style="color: rgba(245,240,232,0.65); font-size: 14px; max-width: 540px;">Tap any activity to see it up close. Swipe or use the arrows to flip through.</p>
+      <div class="activities-grid" id="activitiesGrid">
+        <div class="activity-card"
+             data-src="assets/08_pool_table_bar_edited.jpg"
+             data-title="Pool Tables"
+             style="--img: url('assets/08_pool_table_bar_edited.jpg')">
           <div class="activity-overlay"></div>
+          <div class="activity-zoom" aria-hidden="true">+</div>
           <div class="activity-content">
             <div class="activity-icon">🎱</div>
             <h3>Pool Tables</h3>
             <p>Multiple tables across two dedicated rooms. Rack 'em up and play all night — we're open 24 hours.</p>
           </div>
         </div>
-        <div class="activity-card" style="--img: url('assets/04_darts_area_edited.jpg')">
+        <div class="activity-card"
+             data-src="assets/04_darts_area_edited.jpg"
+             data-title="Darts"
+             style="--img: url('assets/04_darts_area_edited.jpg')">
           <div class="activity-overlay"></div>
+          <div class="activity-zoom" aria-hidden="true">+</div>
           <div class="activity-content">
             <div class="activity-icon">🎯</div>
             <h3>Darts</h3>
             <p>Electronic dartboard with scoring display. Grab a drink, step up to the oche, and show us what you've got.</p>
           </div>
         </div>
-        <div class="activity-card" style="--img: url('assets/06_foosball_area_edited.jpg')">
+        <div class="activity-card"
+             data-src="assets/06_foosball_area_edited.jpg"
+             data-title="Foosball"
+             style="--img: url('assets/06_foosball_area_edited.jpg')">
           <div class="activity-overlay"></div>
+          <div class="activity-zoom" aria-hidden="true">+</div>
           <div class="activity-content">
             <div class="activity-icon">⚽</div>
             <h3>Foosball</h3>
             <p>Fast-paced table football with live sports on the big screen behind you. The full sports bar experience.</p>
           </div>
         </div>
-        <div class="activity-card" style="--img: url('assets/03_lounge_group_alt_edited.jpg')">
+        <div class="activity-card"
+             data-src="assets/03_lounge_group_alt_edited.jpg"
+             data-title="Karaoke & Sports"
+             style="--img: url('assets/03_lounge_group_alt_edited.jpg')">
           <div class="activity-overlay"></div>
+          <div class="activity-zoom" aria-hidden="true">+</div>
           <div class="activity-content">
             <div class="activity-icon">🎤</div>
             <h3>Karaoke &amp; Sports</h3>
@@ -79,6 +96,16 @@
       </div>
     </div>
   </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8592;</button>
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next">&#8594;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+    <div class="lightbox-title" id="lightboxTitle"></div>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+  </div>
 
   <!-- BAR FEATURE -->
   <section class="bar-feature">

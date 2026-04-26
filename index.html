@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#6B7A4D" />
   <title>On Mucurapo — Bar & Grill · Port of Spain</title>
   <meta name="description" content="On Mucurapo Bar & Grill on Mucurapo Rd, Port of Spain. Open 24 hours. Pool, darts, foosball, karaoke, and sports." />
+  <link rel="icon" type="image/png" href="assets/on%20mucurapo%20logo.png" />
+  <link rel="preload" as="image" href="assets/on%20mucurapo%20logo.png" />
+  <link rel="preload" as="video" href="assets/On%20mucurapo%20video.mp4" type="video/mp4" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
@@ -15,8 +19,7 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <a href="index.html" class="nav-logo">
-      <img src="assets/logo.png" alt="On Mucurapo" class="nav-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" />
-      <span class="nav-logo-text" style="display:none;">ON MUCURAPO</span>
+      <img src="assets/on%20mucurapo%20logo.png" alt="On Mucurapo" class="nav-logo-img" />
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -24,15 +27,14 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="activities.html">Activities</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
       <li><a href="contact.html">Find Us</a></li>
     </ul>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline poster="assets/07_pool_lounge_wide_edited.jpg">
-      <source src="assets/On mucurapo video.mp4" type="video/mp4" />
+    <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="assets/07_pool_lounge_wide_edited.jpg">
+      <source src="assets/On%20mucurapo%20video.mp4" type="video/mp4" />
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -91,15 +93,6 @@
             <h3>Activities</h3>
             <p>Pool, darts, foosball, karaoke & sports</p>
             <span class="page-link-arrow">Explore →</span>
-          </div>
-        </a>
-        <a href="gallery.html" class="page-link-card">
-          <div class="page-link-card-bg" style="background-image: url('assets/07_pool_lounge_wide_edited.jpg')"></div>
-          <div class="page-link-card-overlay"></div>
-          <div class="page-link-card-content">
-            <h3>Gallery</h3>
-            <p>Photos from inside On Mucurapo</p>
-            <span class="page-link-arrow">View Photos →</span>
           </div>
         </a>
         <a href="contact.html" class="page-link-card">
