@@ -233,28 +233,28 @@ h2 {
   border-bottom: 2px solid var(--brass);
 }
 
-/* Exterior feature: small panoramic crop showing top of the sign */
+/* Exterior feature: small but full image, no cropping */
 .exterior-feature {
   width: 100%;
   background: var(--dark);
   border-bottom: 1px solid var(--border);
-  overflow: hidden;
   display: flex;
   justify-content: center;
+  padding: 24px 16px;
 }
 .exterior-feature img {
-  width: 100%;
-  max-width: 720px;
-  height: 180px;
-  object-fit: cover;
-  object-position: center top;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 360px;
+  object-fit: contain;
   display: block;
+  border-radius: 8px;
 }
 
 @media (max-width: 768px) {
   .exterior-feature img {
-    height: 140px;
-    max-width: 100%;
+    max-height: 240px;
   }
 }
 
