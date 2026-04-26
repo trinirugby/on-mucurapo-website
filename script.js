@@ -59,8 +59,8 @@ if (heroVideo) {
   });
 }
 
-// ── ACTIVITY LIGHTBOX ───────────────────────────────────────
-const activityCards = Array.from(document.querySelectorAll('.activity-card[data-src]'));
+// ── ACTIVITY LIGHTBOX (per-activity image sets) ─────────────
+const activityCards = Array.from(document.querySelectorAll('.activity-card[data-images]'));
 const lightbox      = document.getElementById('lightbox');
 const lightboxImg   = document.getElementById('lightboxImg');
 const lightboxTitle = document.getElementById('lightboxTitle');
@@ -69,20 +69,34 @@ const lightboxClose = document.getElementById('lightboxClose');
 const lightboxPrev  = document.getElementById('lightboxPrev');
 const lightboxNext  = document.getElementById('lightboxNext');
 
-let currentIndex = 0;
-
 if (lightbox && activityCards.length) {
-  const updateLightbox = () => {
-    const card = activityCards[currentIndex];
-    lightboxImg.src = card.dataset.src;
-    lightboxImg.alt = card.dataset.title || '';
-    if (lightboxTitle) lightboxTitle.textContent = card.dataset.title || '';
-    if (lightboxCounter) lightboxCounter.textContent = `${currentIndex + 1} / ${activityCards.length}`;
+  let activeSet   = [];
+  let activeIdx   = 0;
+  let activeTitle = '';
+
+  const showCurrent = () => {
+    if (!activeSet.length) return;
+    lightboxImg.src = activeSet[activeIdx];
+    lightboxImg.alt = activeTitle;
+    if (lightboxTitle) lightboxTitle.textContent = activeTitle;
+    if (lightboxCounter) {
+      lightboxCounter.textContent = activeSet.length > 1
+        ? `${activeIdx + 1} / ${activeSet.length}`
+        : '';
+    }
+    // Toggle prev/next visibility for single-image activities
+    const showNav = activeSet.length > 1;
+    if (lightboxPrev) lightboxPrev.style.display = showNav ? '' : 'none';
+    if (lightboxNext) lightboxNext.style.display = showNav ? '' : 'none';
   };
 
-  const openLightbox = (index) => {
-    currentIndex = index;
-    updateLightbox();
+  const openActivity = (card) => {
+    try {
+      activeSet = JSON.parse(card.dataset.images);
+    } catch { return; }
+    activeIdx = 0;
+    activeTitle = card.dataset.title || '';
+    showCurrent();
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
   };
@@ -93,17 +107,19 @@ if (lightbox && activityCards.length) {
   };
 
   const showPrev = () => {
-    currentIndex = (currentIndex - 1 + activityCards.length) % activityCards.length;
-    updateLightbox();
+    if (activeSet.length < 2) return;
+    activeIdx = (activeIdx - 1 + activeSet.length) % activeSet.length;
+    showCurrent();
   };
 
   const showNext = () => {
-    currentIndex = (currentIndex + 1) % activityCards.length;
-    updateLightbox();
+    if (activeSet.length < 2) return;
+    activeIdx = (activeIdx + 1) % activeSet.length;
+    showCurrent();
   };
 
-  activityCards.forEach((card, i) => {
-    card.addEventListener('click', () => openLightbox(i));
+  activityCards.forEach(card => {
+    card.addEventListener('click', () => openActivity(card));
   });
 
   lightboxClose.addEventListener('click', closeLightbox);
@@ -138,7 +154,7 @@ if (lightbox && activityCards.length) {
     }
   }, { passive: true });
 
-  // Click on lightbox image → next
+  // Click on lightbox image → next (only when multi-image)
   lightboxImg.addEventListener('click', e => {
     e.stopPropagation();
     showNext();
